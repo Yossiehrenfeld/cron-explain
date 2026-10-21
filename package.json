@@ -1,0 +1,49 @@
+{
+  "name": "cron-explain",
+  "version": "0.1.0",
+  "description": "Explain cron expressions in plain English and compute their next run times. Zero dependencies, with a CLI.",
+  "license": "MIT",
+  "author": "Yosef Ehrenfeld",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yossiehrenfeld/cron-explain.git"
+  },
+  "keywords": [
+    "cron",
+    "crontab",
+    "schedule",
+    "explain",
+    "cli",
+    "human readable"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "@types/node": "^20.0.0"
+  },
+  "bin": {
+    "cron-explain": "./dist/cli.js"
+  }
+}
