@@ -1,5 +1,8 @@
 # cron-explain
 
+[![CI](https://github.com/Yossiehrenfeld/cron-explain/actions/workflows/ci.yml/badge.svg)](https://github.com/Yossiehrenfeld/cron-explain/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Explain cron expressions in plain English and compute their next run times. Zero dependencies,
 TypeScript types included, tiny CLI.
 
@@ -13,10 +16,20 @@ Every 15 minutes past hour 9 through 17 on Monday through Friday.
 
 ## Install
 
+Not on npm yet — install straight from GitHub (npm builds it on install):
+
 ```sh
-npm install cron-explain        # library
-npm install -g cron-explain     # CLI
+npm install github:Yossiehrenfeld/cron-explain
 ```
+
+Or clone and build it yourself:
+
+```sh
+git clone https://github.com/Yossiehrenfeld/cron-explain && cd cron-explain
+npm install && npm run build && npm link   # puts `cron-explain` on your PATH
+```
+
+Requires Node 18+.
 
 ## CLI
 
